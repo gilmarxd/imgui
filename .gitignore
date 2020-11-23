@@ -12,6 +12,11 @@ examples/build/*
 examples/*/Debug/*
 examples/*/Release/*
 examples/*/x64/*
+bin-int/
+bin/
+
+# GCC Makefile
+Makefile
 
 ## Visual Studio artifacts
 .vs
