@@ -12,9 +12,19 @@ examples/build/*
 examples/*/Debug/*
 examples/*/Release/*
 examples/*/x64/*
+bin-int/
+bin/
+*.make
+
+# GCC Makefile
+Makefile
 
 ## Visual Studio artifacts
 .vs
+.vscode
+*.vcxproj
+*.vcxproj.*
+*.sln
 ipch
 *.opensdf
 *.log
@@ -27,7 +37,8 @@ ipch
 *.VC.VC.opendb
 
 ## Xcode artifacts
-project.xcworkspace
+*.xcworkspace
+*.xcodeproj
 xcuserdata
 
 ## Emscripten artifacts
