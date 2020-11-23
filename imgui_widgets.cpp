@@ -10906,7 +10906,6 @@ void ImGui::TableSortSpecsBuild(ImGuiTable* table)
 
     // Write output
     table->SortSpecsData.resize(table->SortSpecsCount);
-    table->SortSpecs.ColumnsMask = 0x00;
     for (int column_n = 0; column_n < table->ColumnsCount; column_n++)
     {
         ImGuiTableColumn* column = &table->Columns[column_n];
@@ -10917,7 +10916,6 @@ void ImGui::TableSortSpecsBuild(ImGuiTable* table)
         sort_spec->ColumnIndex = (ImU8)column_n;
         sort_spec->SortOrder = (ImU8)column->SortOrder;
         sort_spec->SortDirection = column->SortDirection;
-        table->SortSpecs.ColumnsMask |= (ImU64)1 << column_n;
     }
     table->SortSpecs.Specs = table->SortSpecsData.Data;
     table->SortSpecs.SpecsCount = table->SortSpecsData.Size;
